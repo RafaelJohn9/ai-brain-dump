@@ -10,6 +10,7 @@ Notes on building agents: things that plan, call tools, hold state across steps,
 - [tool-schema-design.md](tool-schema-design.md) — writing tool schemas the model can call reliably: description as a routing signal, narrowing parameters, one tool/one job, actionable errors, deferred schema loading.
 - [agent-memory.md](agent-memory.md) — what's worth persisting across sessions vs. re-deriving from current state, why the reasoning behind a fact matters more than the fact itself, treating a memory as a checkable claim rather than a guarantee, and an index layer for stores that grow over time.
 - [evaluation.md](evaluation.md) — why plausible output isn't correct output, proxy metrics vs. actual task success, building a golden set from real production cases, three ways to grade an output (exact match, rubric, outcome-based), why an agent shouldn't grade its own work uncritically, and the overfitting-to-eval trap.
+- [multi-agent-orchestration.md](multi-agent-orchestration.md) — orchestrator/worker topology, when multiple agents genuinely beat one vs. when it's just overhead, why a handoff needs a synthesized brief instead of a raw transcript, aggregation as real reconciliation work, and choreography vs. orchestration as a coordination-topology tradeoff.
 
 ## Scope
 
