@@ -1,53 +1,23 @@
 # AI Brain Dump
 
-Welcome to **AI Brain Dump** — a collaborative space for learning, sharing, and building quality AI agents. This repository is dedicated to exploring the vast landscape of artificial intelligence, combining useful resources, and documenting practical knowledge.
+A working resource on building in the agentic-AI era: agentic AI systems, UX/UI design, architectural patterns, coding patterns, and the tools/skills that make an AI-assisted workflow actually work.
 
-## What You'll Find Here
+See [ROADMAP.md](ROADMAP.md) for what's populated vs. still scaffolded.
 
-- **Large Language Models (LLMs):**
-  - Overview of popular LLMs, their categories, payment models, and context window sizes.
-  - Guidance on choosing the right LLM for your use case.
+## Contents
 
-- **Large Multimodal Models (LMMs):**
-  - Insights into models that process both text and images.
-  - Use cases and integration tips.
+- **[agentic-ai/](agentic-ai/)** — agent loops, tool use, multi-agent orchestration, memory, evaluation.
+- **[architecture-patterns/](architecture-patterns/)** — structural patterns for organizing a project: layering, service boundaries, event-driven and AI-system-specific architectures.
+- **[coding-patterns/](coding-patterns/)** — code-level patterns: design patterns, error handling, testing, patterns for AI-assisted coding.
+- **[ux-ui-design/](ux-ui-design/)** — visual fundamentals, interaction patterns, design systems, accessibility, working with AI design tools.
+- **[tools-and-skills/](tools-and-skills/)** — a catalog of tools, CLIs, and reusable agent skills, with real usage notes.
+- **[prompts/](prompts/)** — ready-to-use system prompts for common agent roles (research agent, UI/UX assistant, prompt interpreter, and more).
+- **[research/](research/)** — longer-form reference material: LLM/LMM model landscape, document-processing deep dive.
 
-- **Document Processing & Indexing:**
-  - Techniques for extracting, organizing, and indexing information from various document types.
+## Contributing
 
-- **Web Scraping & Crawling with AI:**
-  - Tools and best practices for automated data collection from the web using AI.
+This is a personal knowledge base, kept in the open. Each section's `README.md` states its scope — an entry should teach something concrete (a comparison, an example, an opinion backed by a reason), not restate the basics.
 
-- **AI Agents:**
-  - Building, deploying, and managing autonomous agents for diverse tasks.
+## License
 
-- **Machine Learning Fundamentals:**
-  - Core concepts, algorithms, and workflows in supervised, unsupervised, and reinforcement learning.
-  - Practical guides for model training, evaluation, and deployment.
-
-- **Prompt Engineering:**
-  - Strategies for crafting effective prompts to optimize AI model outputs.
-  - Examples and best practices for various use cases.
-
-- **Data Preparation & Feature Engineering:**
-  - Methods for cleaning, transforming, and enriching datasets to improve model performance.
-
-- **Evaluation & Benchmarking:**
-  - Metrics and frameworks for assessing AI models and agents.
-  - Comparative studies and performance analysis.
-
-- **Ethics & Responsible AI:**
-  - Principles and guidelines for building fair, transparent, and accountable AI systems.
-  - Discussions on bias, privacy, and societal impact.
-
-- **AI Tools & Frameworks:**
-  - Overview of popular libraries, platforms, and development environments for AI projects.
-
-- **AI Agent Architecture:**
-  - Key components, design patterns, and best practices for structuring robust AI agents.
-
-## Getting Started
-
-Dive into the sections above to learn, experiment, and contribute. Whether you're new to AI or an experienced practitioner, you'll find valuable resources and practical guides to accelerate your journey.
-
-Let's learn together and make AI accessible for everyone!
+See [LICENSE](LICENSE).

@@ -34,3 +34,9 @@ Try these hands-on Jupyter Notebook exercises to simulate real-world document se
     - Visualize which approaches excel under pressure.
 
 These exercises put document search and summarization methods to the test—helping you discover which techniques are best for high-impact, real-world applications.
+
+## Contents
+
+- [summary.md](summary.md) — distilled synthesis: chunking, indexing, large-document parsing, generation, best practices, industry applications.
+- [document_processing.ipynb](document_processing.ipynb) — notebook scaffold for the exercises above.
+- [raw-research/](raw-research/) — three independent research passes that `summary.md` was distilled from. Kept for their citations and detail; read `summary.md` first.
