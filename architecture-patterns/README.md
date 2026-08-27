@@ -2,7 +2,11 @@
 
 Structural patterns for organizing a project — how pieces are divided and how they're allowed to talk to each other. Framework-agnostic; each pattern should note where it fits and where it doesn't.
 
-**Status: seed.** This section is scaffolded but not yet populated. See the [root ROADMAP](../ROADMAP.md) for what's planned.
+**Status: growing.** See the [root ROADMAP](../ROADMAP.md) for what's planned.
+
+## Contents
+
+- [rag-pipeline.md](rag-pipeline.md) — RAG pipeline architecture: offline/online pipeline split, component boundaries, chunking and retrieval tradeoffs, variants, and when not to use it.
 
 ## Scope
 
