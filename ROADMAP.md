@@ -16,13 +16,13 @@ A real, usable resource on: building agentic AI systems, UX/UI design, architect
 | [architecture-patterns/](architecture-patterns/) | seed | scope defined, no entries yet |
 | [coding-patterns/](coding-patterns/) | seed | scope defined, no entries yet |
 | [ux-ui-design/](ux-ui-design/) | seed | scope defined, no entries yet |
-| [tools-and-skills/](tools-and-skills/) | seed | scope defined, no entries yet |
+| [tools-and-skills/](tools-and-skills/) | growing | 1 entry: Claude Code skills vs. subagents |
 
 ## Near-term priorities
 
-1. Fill in one real entry per seed section before adding more scaffolding — depth over breadth.
-2. `tools-and-skills/` — write up the Claude Code skill/subagent pattern this repo already uses as the first entry; it's real, working knowledge, not theory.
-3. `architecture-patterns/` — write up RAG pipeline architecture, since `research/document-processing/` already has the raw material to draw from.
+1. Fill in one real entry per remaining seed section before adding more scaffolding — depth over breadth.
+2. `architecture-patterns/` — write up RAG pipeline architecture, since `research/document-processing/` already has the raw material to draw from.
+3. `agentic-ai/`, `coding-patterns/`, `ux-ui-design/` still have zero entries — pick one per pass.
 4. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
 
 ## Conventions

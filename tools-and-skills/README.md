@@ -2,7 +2,11 @@
 
 A working catalog of the tools, CLIs, and reusable skills worth knowing in an agentic-coding workflow — what each one is for, and when to reach for it over the alternative.
 
-**Status: seed.** This section is scaffolded but not yet populated. See the [root ROADMAP](../ROADMAP.md) for what's planned.
+**Status: growing.** See the [root ROADMAP](../ROADMAP.md) for what's planned.
+
+## Contents
+
+- [claude-code-skills-and-subagents.md](claude-code-skills-and-subagents.md) — how Skills and Subagents differ in Claude Code, when to reach for each, and a worked example from this repo's own restructure.
 
 ## Scope
 
