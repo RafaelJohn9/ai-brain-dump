@@ -2,7 +2,11 @@
 
 Notes on building agents: things that plan, call tools, hold state across steps, and recover when a step fails — as opposed to a single prompt-in/completion-out call.
 
-**Status: seed.** This section is scaffolded but not yet populated. See the [root ROADMAP](../ROADMAP.md) for what's planned.
+**Status: growing.** See the [root ROADMAP](../ROADMAP.md) for what's planned.
+
+## Contents
+
+- [agent-loop.md](agent-loop.md) — the plan/act/observe loop, termination conditions, context growth as the loop's real resource constraint, tool-call design, and common failure modes (thrashing, premature stopping, context poisoning, runaway autonomy).
 
 ## Scope
 

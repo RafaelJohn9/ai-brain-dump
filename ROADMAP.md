@@ -12,7 +12,7 @@ A real, usable resource on: building agentic AI systems, UX/UI design, architect
 |---|---|---|
 | [prompts/](prompts/) | populated | 8 system prompts, indexed |
 | [research/](research/) | populated | LLM landscape snapshot + document-processing deep dive |
-| [agentic-ai/](agentic-ai/) | seed | scope defined, no entries yet |
+| [agentic-ai/](agentic-ai/) | growing | 1 entry: the agent loop |
 | [architecture-patterns/](architecture-patterns/) | growing | 1 entry: RAG pipeline architecture |
 | [coding-patterns/](coding-patterns/) | seed | scope defined, no entries yet |
 | [ux-ui-design/](ux-ui-design/) | seed | scope defined, no entries yet |
@@ -21,7 +21,7 @@ A real, usable resource on: building agentic AI systems, UX/UI design, architect
 ## Near-term priorities
 
 1. Fill in one real entry per remaining seed section before adding more scaffolding — depth over breadth.
-2. `agentic-ai/`, `coding-patterns/`, `ux-ui-design/` still have zero entries — pick one per pass.
+2. `coding-patterns/`, `ux-ui-design/` still have zero entries — pick one per pass.
 3. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
 
 ## Conventions
