@@ -7,6 +7,7 @@ A working catalog of the tools, CLIs, and reusable skills worth knowing in an ag
 ## Contents
 
 - [claude-code-skills-and-subagents.md](claude-code-skills-and-subagents.md) — how Skills and Subagents differ in Claude Code, when to reach for each, and a worked example from this repo's own restructure.
+- [repo-level-agent-instructions.md](repo-level-agent-instructions.md) — CLAUDE.md / AGENTS.md: what belongs in it vs. what doesn't, why it should stay short, scoping it in a monorepo, and treating it like code that goes stale if not updated in the same diff as the change it describes.
 
 ## Scope
 

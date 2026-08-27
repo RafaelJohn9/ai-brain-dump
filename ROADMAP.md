@@ -16,15 +16,15 @@ A real, usable resource on: building agentic AI systems, UX/UI design, architect
 | [architecture-patterns/](architecture-patterns/) | growing | 2 entries: RAG pipeline architecture, service boundaries |
 | [coding-patterns/](coding-patterns/) | growing | 2 entries: agent-legible code, error-handling boundaries |
 | [ux-ui-design/](ux-ui-design/) | growing | 2 entries: avoiding the AI-generated look, design tokens & theming |
-| [tools-and-skills/](tools-and-skills/) | growing | 1 entry: Claude Code skills vs. subagents |
+| [tools-and-skills/](tools-and-skills/) | growing | 2 entries: Claude Code skills vs. subagents, repo-level agent instructions |
 
-Every section has at least one real entry; four of five now have two. The cross-links between entries (e.g. tool-schema-design ↔ agent-loop, error-handling-boundaries ↔ agent-legible-code) are starting to do real work — keep adding them as new entries land.
+Every section now has at least two real entries. The cross-links between entries (tool-schema-design ↔ agent-loop, error-handling-boundaries ↔ agent-legible-code, repo-level-agent-instructions ↔ agent-legible-code) are starting to do real work — keep adding them as new entries land.
 
 ## Near-term priorities
 
-1. `tools-and-skills/` is the one section still at a single entry — candidate next: a real MCP server integration write-up, or a second Claude Code pattern (hooks, or the CLAUDE.md/AGENTS.md convention referenced from `coding-patterns/agent-legible-code.md`).
-2. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
-3. Keep depth over breadth: a third entry per section beats a sixth section.
+1. Depth over breadth continues: a third entry per section beats a sixth section. No section is urgently behind the others anymore, so the next entry can follow whatever's actually useful rather than filling a gap.
+2. Candidate topics not yet covered: memory/evaluation (`agentic-ai/`), hooks or MCP integration (`tools-and-skills/`), a layering/hexagonal-architecture write-up (`architecture-patterns/`), testing patterns (`coding-patterns/`), interaction/empty-state patterns (`ux-ui-design/`).
+3. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
 
 ## Conventions
 
