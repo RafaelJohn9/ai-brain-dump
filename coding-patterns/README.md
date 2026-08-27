@@ -2,7 +2,11 @@
 
 Code-level patterns — smaller in scope than [architecture-patterns](../architecture-patterns/): how to write a function, module, or class well, not how to lay out a whole system.
 
-**Status: seed.** This section is scaffolded but not yet populated. See the [root ROADMAP](../ROADMAP.md) for what's planned.
+**Status: growing.** See the [root ROADMAP](../ROADMAP.md) for what's planned.
+
+## Contents
+
+- [agent-legible-code.md](agent-legible-code.md) — structuring code so an AI coding agent can modify it safely: locality of change, explicit boundaries, self-verification, comment discipline, and why speculative abstraction is riskier under agent-driven changes than human ones.
 
 ## Scope
 
