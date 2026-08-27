@@ -7,6 +7,7 @@ Code-level patterns — smaller in scope than [architecture-patterns](../archite
 ## Contents
 
 - [agent-legible-code.md](agent-legible-code.md) — structuring code so an AI coding agent can modify it safely: locality of change, explicit boundaries, self-verification, comment discipline, and why speculative abstraction is riskier under agent-driven changes than human ones.
+- [error-handling-boundaries.md](error-handling-boundaries.md) — exceptions vs. result types vs. error codes, why the mechanism matters less than *where* handling happens, with a before/after refactor moving validation to a single boundary.
 
 ## Scope
 
