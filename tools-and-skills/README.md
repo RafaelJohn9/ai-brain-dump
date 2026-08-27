@@ -9,6 +9,7 @@ A working catalog of the tools, CLIs, and reusable skills worth knowing in an ag
 - [claude-code-skills-and-subagents.md](claude-code-skills-and-subagents.md) — how Skills and Subagents differ in Claude Code, when to reach for each, and a worked example from this repo's own restructure.
 - [repo-level-agent-instructions.md](repo-level-agent-instructions.md) — CLAUDE.md / AGENTS.md: what belongs in it vs. what doesn't, why it should stay short, scoping it in a monorepo, and treating it like code that goes stale if not updated in the same diff as the change it describes.
 - [claude-code-hooks.md](claude-code-hooks.md) — hooks as deterministic enforcement vs. instructions as guidance an agent is merely expected to follow, common uses (blocking dangerous actions, mechanical style enforcement, audit logging), the trust model, and pitfalls (over-broad firing, duplicating what CLAUDE.md already says).
+- [mcp-server-integration.md](mcp-server-integration.md) — MCP as a shared integration protocol, deferred tool schemas, the trust boundary MCP introduces (external content isn't instructions), namespacing to prevent tool collisions, and treating a server connection as a capability grant.
 
 ## Scope
 
