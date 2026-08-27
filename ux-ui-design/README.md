@@ -7,6 +7,7 @@ Design knowledge for people building the interface, not just the backend — vis
 ## Contents
 
 - [avoiding-the-ai-generated-look.md](avoiding-the-ai-generated-look.md) — the recognizable tells of generated-not-designed UI (default gradients, uniform rounded-shadow surfaces, decorative icons, template hero/feature-grid layouts), why they converge, what actually breaks the pattern, and a pre-ship self-review checklist.
+- [design-tokens-and-theming.md](design-tokens-and-theming.md) — primitive vs. semantic tokens, the three-state (light/dark/system) theming problem and a CSS pattern that actually handles all three, and when to build a token system vs. adopt one.
 
 ## Scope
 
