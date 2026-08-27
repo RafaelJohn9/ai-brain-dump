@@ -10,6 +10,7 @@ A working catalog of the tools, CLIs, and reusable skills worth knowing in an ag
 - [repo-level-agent-instructions.md](repo-level-agent-instructions.md) — CLAUDE.md / AGENTS.md: what belongs in it vs. what doesn't, why it should stay short, scoping it in a monorepo, and treating it like code that goes stale if not updated in the same diff as the change it describes.
 - [claude-code-hooks.md](claude-code-hooks.md) — hooks as deterministic enforcement vs. instructions as guidance an agent is merely expected to follow, common uses (blocking dangerous actions, mechanical style enforcement, audit logging), the trust model, and pitfalls (over-broad firing, duplicating what CLAUDE.md already says).
 - [mcp-server-integration.md](mcp-server-integration.md) — MCP as a shared integration protocol, deferred tool schemas, the trust boundary MCP introduces (external content isn't instructions), namespacing to prevent tool collisions, and treating a server connection as a capability grant.
+- [evaluating-prompts-and-skills.md](evaluating-prompts-and-skills.md) — the scaled-down, practical version of agentic-ai/evaluation.md for one prompt template or skill: a small golden set, rubric grading, regression-testing an edit, and an honest note that none of this repo's own prompts have one yet.
 
 ## Scope
 
