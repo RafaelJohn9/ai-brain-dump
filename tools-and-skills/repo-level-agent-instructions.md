@@ -2,6 +2,8 @@
 
 A file — `CLAUDE.md` for Claude Code, converging with other tools on the shared `AGENTS.md` convention — that an agentic coding tool reads automatically at the start of a session, before it's touched a single file. It's the mechanism referenced but not detailed in [coding-patterns/agent-legible-code.md](../coding-patterns/agent-legible-code.md): a way to give an agent durable, repo-specific context up front instead of leaving it to rediscover, or guess, the same things every single session.
 
+**See it applied:** this repo's own [`/CLAUDE.md`](../CLAUDE.md) — short, states the conventions actually used to build this knowledge base (how to add an entry, the no-filler bar, the visual-artifact and git conventions), and nothing more than that.
+
 ## The problem it solves
 
 Without it, an agent facing a repo it hasn't worked in before has two options: ask (which interrupts flow for anything it could plausibly have been told up front) or guess (which is fast but inconsistent — a different session might infer a different convention from the same ambiguous code). Neither is free. Asking repeatedly for things a maintainer already knows the answer to wastes the person's time; guessing wrong produces a change that has to be caught in review and redone, after the fact, instead of never being made in the first place.
@@ -40,5 +42,6 @@ Treat changes to this file like changes to code, not like documentation cleanup 
 
 ## Related
 
+- [`/CLAUDE.md`](../CLAUDE.md) — this repo's own instructions file, a live example of the "keep it short" principle above in practice.
 - [coding-patterns/agent-legible-code.md](../coding-patterns/agent-legible-code.md) — where this file was first introduced, as the source of team convention an agent reads instead of inferring style from nearby files.
 - [claude-code-skills-and-subagents.md](claude-code-skills-and-subagents.md) — a skill packages a *procedure* an agent should follow when a specific task comes up; this file packages *standing facts* about the repo an agent should know regardless of task. They compose: a skill's instructions can assume the repo-level context has already been read.
