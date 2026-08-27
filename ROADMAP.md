@@ -15,14 +15,16 @@ A real, usable resource on: building agentic AI systems, UX/UI design, architect
 | [agentic-ai/](agentic-ai/) | growing | 1 entry: the agent loop |
 | [architecture-patterns/](architecture-patterns/) | growing | 1 entry: RAG pipeline architecture |
 | [coding-patterns/](coding-patterns/) | growing | 1 entry: writing agent-legible code |
-| [ux-ui-design/](ux-ui-design/) | seed | scope defined, no entries yet |
+| [ux-ui-design/](ux-ui-design/) | growing | 1 entry: avoiding the AI-generated look |
 | [tools-and-skills/](tools-and-skills/) | growing | 1 entry: Claude Code skills vs. subagents |
+
+Every section now has at least one real entry — the priority shifts from "seed every section" to depth and upkeep.
 
 ## Near-term priorities
 
-1. Fill in one real entry per remaining seed section before adding more scaffolding — depth over breadth.
-2. `ux-ui-design/` still has zero entries — next up.
-3. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
+1. Add a second entry to each section rather than starting new sections — depth over breadth still holds.
+2. Re-verify `research/llm-model-landscape.md` periodically — it's a dated snapshot (last updated ~September 2025) and will rot.
+3. Candidate next entries: tool-schema design (`agentic-ai/`), design tokens/systems (`ux-ui-design/`), error-handling patterns (`coding-patterns/`), service-boundary patterns (`architecture-patterns/`).
 
 ## Conventions
 

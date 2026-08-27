@@ -2,7 +2,11 @@
 
 Design knowledge for people building the interface, not just the backend — visual design fundamentals, interaction patterns, and how to work with AI design tools without shipping something generic.
 
-**Status: seed.** This section is scaffolded but not yet populated. See the [root ROADMAP](../ROADMAP.md) for what's planned.
+**Status: growing.** See the [root ROADMAP](../ROADMAP.md) for what's planned.
+
+## Contents
+
+- [avoiding-the-ai-generated-look.md](avoiding-the-ai-generated-look.md) — the recognizable tells of generated-not-designed UI (default gradients, uniform rounded-shadow surfaces, decorative icons, template hero/feature-grid layouts), why they converge, what actually breaks the pattern, and a pre-ship self-review checklist.
 
 ## Scope
 
