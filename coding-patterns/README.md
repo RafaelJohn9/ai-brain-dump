@@ -10,6 +10,7 @@ Code-level patterns — smaller in scope than [architecture-patterns](../archite
 - [error-handling-boundaries.md](error-handling-boundaries.md) — exceptions vs. result types vs. error codes, why the mechanism matters less than *where* handling happens, with a before/after refactor moving validation to a single boundary.
 - [testing-patterns.md](testing-patterns.md) — mocks vs. stubs vs. fakes, the boundary heuristic for what to fake vs. exercise for real, a before/after example of a test that only checks its own mocks, property-based testing, and fixture scope creep.
 - [functional-patterns.md](functional-patterns.md) — pure functions, immutability via structural sharing (not naive copying), composition over one large function, a before/after example separating computation from a hidden side effect, and where the discipline pays off vs. adds ceremony.
+- [classic-patterns-in-modern-languages.md](classic-patterns-in-modern-languages.md) — which GoF patterns a modern language's built-in features now supersede (Strategy, Iterator, Command, Observer) vs. which still earn their place (Factory, Adapter, Decorator), with a before/after example and a filter for telling the two apart.
 
 ## Scope
 
