@@ -4,7 +4,7 @@ MCP (Model Context Protocol) is a shared protocol for exposing external tools an
 
 ## What a server actually hands the agent
 
-An MCP server typically exposes **tools** (callable actions — send a message, read a page, query a record) and sometimes standing **instructions** for how to use them well. Both often arrive lazily rather than all at once: tools get listed by name first, with full schemas fetched only when something in the current task actually calls for them. This is a live instance of the deferred-schema-loading pattern from [tool-schema-design.md](tool-schema-design.md) — the fixed context cost stays proportional to what a session actually touches, not to how many servers happen to be connected.
+An MCP server typically exposes **tools** (callable actions — send a message, read a page, query a record) and sometimes standing **instructions** for how to use them well. Both often arrive lazily rather than all at once: tools get listed by name first, with full schemas fetched only when something in the current task actually calls for them. This is a live instance of the deferred-schema-loading pattern from [tool-schema-design.md](../agentic-ai/tool-schema-design.md) — the fixed context cost stays proportional to what a session actually touches, not to how many servers happen to be connected.
 
 ## The trust boundary MCP introduces
 
@@ -14,7 +14,7 @@ This is the same boundary-drawing instinct as [coding-patterns/error-handling-bo
 
 ## Namespacing exists to prevent collisions
 
-Tools from an MCP server are addressed with the server name folded into the tool name, rather than dropped into one flat namespace shared by every connected server. Two servers that each happen to expose a tool called `search` don't collide, and — just as important — it stays legible which external system a given call actually reaches. This is a structural fix for the "near-duplicate tools" anti-pattern named in [tool-schema-design.md](tool-schema-design.md): when tools come from many independently authored servers instead of one designer with a consistent naming convention, namespacing is what keeps overlapping names from becoming an ambiguous routing decision.
+Tools from an MCP server are addressed with the server name folded into the tool name, rather than dropped into one flat namespace shared by every connected server. Two servers that each happen to expose a tool called `search` don't collide, and — just as important — it stays legible which external system a given call actually reaches. This is a structural fix for the "near-duplicate tools" anti-pattern named in [tool-schema-design.md](../agentic-ai/tool-schema-design.md): when tools come from many independently authored servers instead of one designer with a consistent naming convention, namespacing is what keeps overlapping names from becoming an ambiguous routing decision.
 
 ## Connecting a server is granting a capability
 
@@ -28,5 +28,5 @@ Adding an MCP server isn't a neutral configuration step — it's handing the age
 
 ## Related
 
-- [tool-schema-design.md](tool-schema-design.md) — deferred schema loading and the near-duplicate-tools anti-pattern, both of which show up directly in how MCP servers are typically integrated.
+- [tool-schema-design.md](../agentic-ai/tool-schema-design.md) — deferred schema loading and the near-duplicate-tools anti-pattern, both of which show up directly in how MCP servers are typically integrated.
 - [agentic-ai/agent-loop.md](../agentic-ai/agent-loop.md) — irreversible actions needing a confirmation step, independent of which mechanism triggers them.

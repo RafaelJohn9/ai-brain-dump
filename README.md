@@ -2,7 +2,7 @@
 
 A working resource on building in the agentic-AI era: agentic AI systems, UX/UI design, architectural patterns, coding patterns, and the tools/skills that make an AI-assisted workflow actually work.
 
-See [ROADMAP.md](ROADMAP.md) for what's populated vs. still scaffolded.
+See [ROADMAP.md](ROADMAP.md) for exactly what's in each section and what's planned next.
 
 ## Contents
 

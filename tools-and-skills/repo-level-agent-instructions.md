@@ -24,7 +24,7 @@ A repo-level instructions file trades a one-time cost (writing it, keeping it cu
 
 ## Keep it short — the cost is recurring, not one-time
 
-Every line in the file is read on every session, whether or not that session's task touches the part of the repo the line is about. A ten-line file that states the handful of things actually worth knowing up front costs less, every single time, than a two-hundred-line file where most sessions only need three of those lines. This is the same tradeoff as tool-schema bloat in [tool-schema-design.md](tool-schema-design.md): a fixed cost that scales with what exists, not with what a given task actually needs, deserves active pruning.
+Every line in the file is read on every session, whether or not that session's task touches the part of the repo the line is about. A ten-line file that states the handful of things actually worth knowing up front costs less, every single time, than a two-hundred-line file where most sessions only need three of those lines. This is the same tradeoff as tool-schema bloat in [tool-schema-design.md](../agentic-ai/tool-schema-design.md): a fixed cost that scales with what exists, not with what a given task actually needs, deserves active pruning.
 
 ## Scoping it in a monorepo
 

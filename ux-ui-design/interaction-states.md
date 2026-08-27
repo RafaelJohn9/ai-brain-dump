@@ -23,7 +23,7 @@ Updating the interface immediately when a user acts — before the server has ac
 
 ## Error state: the UI-copy version of a boundary error message
 
-[coding-patterns/error-handling-boundaries.md](error-handling-boundaries.md) argues that a good error says what went wrong and what a valid next step looks like. That principle doesn't stop at the backend — it's exactly the test for error-state copy. "Something went wrong" tells a user nothing they can act on. "Couldn't save — check your connection and try again" gives them one. A generic, undifferentiated error state showing up everywhere in an interface is usually a downstream symptom of the same problem described in that entry: if error handling happens too far from where the failure actually occurred, by the time it surfaces at the UI there's no specific information left to show — the boundary that should have captured *what* failed already discarded it.
+[coding-patterns/error-handling-boundaries.md](../coding-patterns/error-handling-boundaries.md) argues that a good error says what went wrong and what a valid next step looks like. That principle doesn't stop at the backend — it's exactly the test for error-state copy. "Something went wrong" tells a user nothing they can act on. "Couldn't save — check your connection and try again" gives them one. A generic, undifferentiated error state showing up everywhere in an interface is usually a downstream symptom of the same problem described in that entry: if error handling happens too far from where the failure actually occurred, by the time it surfaces at the UI there's no specific information left to show — the boundary that should have captured *what* failed already discarded it.
 
 ## Partial/degraded state: show what worked
 
@@ -42,5 +42,5 @@ For any view with dynamic content, explicitly design — or at minimum explicitl
 
 ## Related
 
-- [error-handling-boundaries.md](error-handling-boundaries.md) — where the "an error should say what happened and what to do next" principle originates, at the code level this entry applies to UI copy.
+- [error-handling-boundaries.md](../coding-patterns/error-handling-boundaries.md) — where the "an error should say what happened and what to do next" principle originates, at the code level this entry applies to UI copy.
 - [avoiding-the-ai-generated-look.md](avoiding-the-ai-generated-look.md) — the broader pattern of a template's default state getting all the attention while its other states get none.

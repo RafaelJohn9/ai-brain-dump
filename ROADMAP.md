@@ -1,6 +1,6 @@
 # Roadmap
 
-What this repo is for and what's actually in it right now, vs. what's just scaffolded.
+What this repo is for, and what's actually in it right now.
 
 ## Goal
 
