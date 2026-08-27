@@ -10,6 +10,7 @@ Structural patterns for organizing a project — how pieces are divided and how 
 - [service-boundaries.md](service-boundaries.md) — monolith vs. modular monolith vs. microservices: what splitting into services actually costs, where to draw the boundary, and the distributed-monolith anti-pattern.
 - [layering-and-hexagonal.md](layering-and-hexagonal.md) — layering as dependency direction rather than folder names, ports & adapters as the inverted version, what it actually buys (testability, swappable infrastructure), and the ceremony-without-a-second-implementation anti-pattern.
 - [cqrs-and-event-sourcing.md](cqrs-and-event-sourcing.md) — splitting the write model from the read model, why event sourcing is a related but separate idea, what replaying a long event history actually costs, and the anti-pattern of event sourcing without a read-model projection.
+- [sagas.md](sagas.md) — the concrete pattern for the distributed-transaction cost named in service-boundaries.md: local transactions plus compensating actions, choreography vs. orchestration, why a compensating action isn't just the reverse operation, and the missing-compensating-action anti-pattern.
 
 ## Scope
 
