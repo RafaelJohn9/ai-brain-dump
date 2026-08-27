@@ -9,6 +9,7 @@ Code-level patterns — smaller in scope than [architecture-patterns](../archite
 - [agent-legible-code.md](agent-legible-code.md) — structuring code so an AI coding agent can modify it safely: locality of change, explicit boundaries, self-verification, comment discipline, and why speculative abstraction is riskier under agent-driven changes than human ones.
 - [error-handling-boundaries.md](error-handling-boundaries.md) — exceptions vs. result types vs. error codes, why the mechanism matters less than *where* handling happens, with a before/after refactor moving validation to a single boundary.
 - [testing-patterns.md](testing-patterns.md) — mocks vs. stubs vs. fakes, the boundary heuristic for what to fake vs. exercise for real, a before/after example of a test that only checks its own mocks, property-based testing, and fixture scope creep.
+- [functional-patterns.md](functional-patterns.md) — pure functions, immutability via structural sharing (not naive copying), composition over one large function, a before/after example separating computation from a hidden side effect, and where the discipline pays off vs. adds ceremony.
 
 ## Scope
 
