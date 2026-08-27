@@ -1,0 +1,599 @@
+<title>Color Scheme Specimens</title>
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .demo-btn, .jump a { transition: transform 120ms ease, opacity 120ms ease, background-color 120ms ease; }
+  }
+
+  :root {
+    --page-bg: #FAFAF7;
+    --page-surface: #FFFFFF;
+    --page-text: #1C1B19;
+    --page-muted: #6B665D;
+    --page-accent: #4C5B76;
+    --page-border: #E4E0D8;
+    --page-rule: #D8D3C8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page-bg: #161513;
+      --page-surface: #1E1D1A;
+      --page-text: #EDEAE3;
+      --page-muted: #A39D91;
+      --page-accent: #8CA0C4;
+      --page-border: #33312B;
+      --page-rule: #2B2924;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --page-bg: #161513;
+    --page-surface: #1E1D1A;
+    --page-text: #EDEAE3;
+    --page-muted: #A39D91;
+    --page-accent: #8CA0C4;
+    --page-border: #33312B;
+    --page-rule: #2B2924;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--page-text);
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 { font-family: "Fraunces", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  code, .mono { font-family: "JetBrains Mono", ui-monospace, "SF Mono", monospace; }
+
+  a { color: var(--page-accent); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--page-accent);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 72px) clamp(20px, 4vw, 40px) 96px;
+  }
+
+  /* ---------- Header ---------- */
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--page-rule);
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--page-muted);
+  }
+  .masthead h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.01em;
+  }
+  .masthead p {
+    max-width: 62ch;
+    color: var(--page-muted);
+    font-size: 17px;
+    margin: 0;
+  }
+  .masthead .note {
+    font-size: 14px;
+    color: var(--page-muted);
+    border-left: 2px solid var(--page-border);
+    padding-left: 14px;
+    max-width: 60ch;
+  }
+
+  /* ---------- Jump nav ---------- */
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 4px;
+    margin-bottom: 56px;
+    font-size: 13px;
+  }
+  .jump a {
+    display: inline-block;
+    padding: 6px 11px;
+    border: 1px solid var(--page-border);
+    border-radius: 3px;
+    color: var(--page-text);
+    text-decoration: none;
+    background: var(--page-surface);
+  }
+  .jump a:hover { border-color: var(--page-accent); color: var(--page-accent); }
+
+  /* ---------- Group headers ---------- */
+  .group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 64px 0 28px;
+  }
+  .group-header:first-of-type { margin-top: 0; }
+  .group-header h2 { font-size: 22px; }
+  .group-header .count { font-size: 13px; color: var(--page-muted); font-family: "JetBrains Mono", monospace; }
+  .group-header .rule { flex: 1; height: 1px; background: var(--page-rule); }
+
+  /* ---------- Specimen grid ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 28px;
+  }
+
+  .specimen {
+    scroll-margin-top: 20px;
+    border: 1px solid var(--page-border);
+    border-radius: 4px;
+    background: var(--page-surface);
+    overflow: hidden;
+  }
+  .specimen__head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 18px 20px 14px;
+  }
+  .specimen__index {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--page-muted);
+  }
+  .specimen__head h3 { font-size: 19px; flex: 1; }
+  .specimen__def {
+    padding: 0 20px 16px;
+    color: var(--page-muted);
+    font-size: 14.5px;
+    max-width: 52ch;
+  }
+
+  /* Swatch strip */
+  .swatches {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 18px;
+    flex-wrap: wrap;
+  }
+  .swatch { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+  .swatch__chip {
+    width: 38px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .swatch__label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--page-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  /* ---------- Demo card (self-contained, uses only --c-* tokens) ---------- */
+  .demo-stage {
+    padding: 22px 20px 20px;
+    background: var(--page-bg);
+    border-top: 1px solid var(--page-rule);
+  }
+  .demo-card {
+    background: var(--c-bg);
+    border: var(--c-border-width, 1px) solid var(--c-border);
+    border-radius: 4px;
+    padding: 20px 22px;
+  }
+  .demo-eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-accent, var(--c-muted));
+    margin-bottom: 8px;
+  }
+  .demo-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 20px;
+    color: var(--c-text);
+    margin-bottom: 8px;
+  }
+  .demo-desc {
+    font-family: "Public Sans", sans-serif;
+    font-size: 14.5px;
+    color: var(--c-muted);
+    margin: 0 0 16px;
+    max-width: 42ch;
+  }
+  .demo-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .demo-tag {
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .demo-tag--alt { background: var(--tag2-bg, var(--tag-bg)); color: var(--tag2-text, var(--tag-text)); }
+  .demo-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .demo-btn {
+    font-family: "Public Sans", sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    background: var(--c-btn-bg);
+    color: var(--c-btn-text);
+  }
+  .demo-btn:hover { transform: translateY(-1px); }
+  .demo-btn--ghost {
+    background: transparent;
+    color: var(--c-ghost, var(--c-text));
+    border: 1px solid var(--c-ghost-border, var(--c-border));
+  }
+  .demo-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 12px;
+    color: var(--c-muted);
+    margin-left: auto;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--page-rule);
+    color: var(--page-muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--page-muted); text-decoration: underline; text-underline-offset: 2px; }
+
+  @media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">ux-ui-design · reference</div>
+    <h1>Color Scheme Specimens</h1>
+    <p>Twelve color-scheme strategies, each applied to the same demo card so they're directly comparable — not twelve different layouts, one layout wearing twelve different colorways.</p>
+    <p class="note">Each specimen is a fixed, self-contained palette — it doesn't respond to this page's own light/dark theme, the same way a printed swatch doesn't change color under different light. Only this page's own chrome (this text, the nav, the borders around each tile) follows your system theme.</p>
+  </header>
+
+  <nav class="jump" aria-label="Jump to a strategy">
+    <a href="#monochromatic">01 Monochromatic</a>
+    <a href="#analogous">02 Analogous</a>
+    <a href="#complementary">03 Complementary</a>
+    <a href="#split-complementary">04 Split-Complementary</a>
+    <a href="#triadic">05 Triadic</a>
+    <a href="#tetradic">06 Tetradic</a>
+    <a href="#neutral-accent">07 Neutral + Accent</a>
+    <a href="#dark-first">08 Dark-Mode-First</a>
+    <a href="#pastel">09 Muted / Pastel</a>
+    <a href="#high-contrast">10 High-Contrast</a>
+    <a href="#duotone">11 Duotone</a>
+    <a href="#earth-tone">12 Earth-Tone</a>
+  </nav>
+
+  <div class="group-header">
+    <h2>Color-Wheel Strategies</h2>
+    <span class="count">01–06</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="grid">
+
+    <section class="specimen" id="monochromatic">
+      <div class="specimen__head"><span class="specimen__index">01</span><h3>Monochromatic</h3></div>
+      <p class="specimen__def">One hue, carried across a range of depth — hierarchy comes from lightness, not from switching colors.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F0F5F4"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#0F2E2B"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#0F766E"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#99C7C1"></div><span class="swatch__label">tag</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F0F5F4;--c-text:#0F2E2B;--c-muted:#4C6B67;--c-border:#CFE3E0;--c-accent:#0F766E;--c-btn-bg:#0F766E;--c-btn-text:#FFFFFF;--tag-bg:#CFE9E5;--tag-text:#0F4E48;--tag2-bg:#99C7C1;--tag2-text:#0B332F;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="analogous">
+      <div class="specimen__head"><span class="specimen__index">02</span><h3>Analogous</h3></div>
+      <p class="specimen__def">Three neighboring hues on the wheel — naturally harmonious, warm without a clash.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F3F1FA"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#241B4E"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#5B3FA6"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#CFE0F5"></div><span class="swatch__label">tag 2</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F3F1FA;--c-text:#241B4E;--c-muted:#5C5382;--c-border:#DAD3F0;--c-accent:#5B3FA6;--c-btn-bg:#5B3FA6;--c-btn-text:#FFFFFF;--tag-bg:#E3DBF7;--tag-text:#3E2E73;--tag2-bg:#CFE0F5;--tag2-text:#1E3A63;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="complementary">
+      <div class="specimen__head"><span class="specimen__index">03</span><h3>Complementary</h3></div>
+      <p class="specimen__def">Two hues directly opposite each other — the contrast does the hierarchy's job for you.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#FBF3EC"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#2B2013"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#B0491F"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#1E3A5F"></div><span class="swatch__label">tag 2</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#FBF3EC;--c-text:#2B2013;--c-muted:#7A6650;--c-border:#EAD9C6;--c-accent:#B0491F;--c-btn-bg:#B0491F;--c-btn-text:#FFFFFF;--tag-bg:#F0DFCB;--tag-text:#6B3A1C;--tag2-bg:#1E3A5F;--tag2-text:#FFFFFF;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="split-complementary">
+      <div class="specimen__head"><span class="specimen__index">04</span><h3>Split-Complementary</h3></div>
+      <p class="specimen__def">A base hue plus both neighbors of its opposite — the punch of complementary, softer to sit with.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#FBF7EC"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#2B2510"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#5A4B8C"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#C99A2E"></div><span class="swatch__label">tag</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#8C4B6B"></div><span class="swatch__label">tag 2</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#FBF7EC;--c-text:#2B2510;--c-muted:#7C7256;--c-border:#EDE3C4;--c-accent:#5A4B8C;--c-btn-bg:#5A4B8C;--c-btn-text:#FFFFFF;--tag-bg:#C99A2E;--tag-text:#2B2510;--tag2-bg:#8C4B6B;--tag2-text:#FFFFFF;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="triadic">
+      <div class="specimen__head"><span class="specimen__index">05</span><h3>Triadic</h3></div>
+      <p class="specimen__def">Three hues, evenly spaced around the wheel, all pulling equal weight.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F7F4EF"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#241F1A"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#B3462C"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#C99A2E"></div><span class="swatch__label">tag</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#33628C"></div><span class="swatch__label">ghost</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F7F4EF;--c-text:#241F1A;--c-muted:#746A5C;--c-border:#E6DFD2;--c-accent:#B3462C;--c-btn-bg:#B3462C;--c-btn-text:#FFFFFF;--tag-bg:#C99A2E;--tag-text:#241F1A;--c-ghost:#33628C;--c-ghost-border:#33628C;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="tetradic">
+      <div class="specimen__head"><span class="specimen__index">06</span><h3>Tetradic (Square)</h3></div>
+      <p class="specimen__def">Two complementary pairs at once — the most distinct hues a UI can hold before it fights itself.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F5F4F0"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#1F3A5F"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#B98A2E"></div><span class="swatch__label">tag</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#6B3A5C"></div><span class="swatch__label">tag 2</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#587A5C"></div><span class="swatch__label">4th (reserve)</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F5F4F0;--c-text:#22201C;--c-muted:#6E695F;--c-border:#E2DED4;--c-accent:#1F3A5F;--c-btn-bg:#1F3A5F;--c-btn-text:#FFFFFF;--tag-bg:#B98A2E;--tag-text:#22201C;--tag2-bg:#6B3A5C;--tag2-text:#FFFFFF;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="group-header">
+    <h2>Practical Palette Archetypes</h2>
+    <span class="count">07–12</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="grid">
+
+    <section class="specimen" id="neutral-accent">
+      <div class="specimen__head"><span class="specimen__index">07</span><h3>Neutral + Accent</h3></div>
+      <p class="specimen__def">Grayscale does the structural work; one color is left to mean "act here."</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F6F5F3"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#262421"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#C6512F"></div><span class="swatch__label">accent</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F6F5F3;--c-text:#262421;--c-muted:#6B6660;--c-border:#E4E1DB;--c-accent:#C6512F;--c-btn-bg:#C6512F;--c-btn-text:#FFFFFF;--tag-bg:#EFE2DB;--tag-text:#6B3A24;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="dark-first">
+      <div class="specimen__head"><span class="specimen__index">08</span><h3>Dark-Mode-First</h3></div>
+      <p class="specimen__def">Designed for the dark ground from the start — not a light theme run through an inverter.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#121212"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#EDEDEA"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#C2F04C"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#4C86F0"></div><span class="swatch__label">ghost</span></div>
+      </div>
+      <div class="demo-stage" style="background:#0B0B0A;">
+        <div class="demo-card" style="--c-bg:#121212;--c-text:#EDEDEA;--c-muted:#9B9B94;--c-border:#2E2E2C;--c-accent:#C2F04C;--c-btn-bg:#C2F04C;--c-btn-text:#121212;--tag-bg:#242423;--tag-text:#EDEDEA;--c-ghost:#4C86F0;--c-ghost-border:#4C86F0;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="pastel">
+      <div class="specimen__head"><span class="specimen__index">09</span><h3>Muted / Pastel</h3></div>
+      <p class="specimen__def">Every hue stepped back in saturation together — nothing shouts because nothing is allowed to.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#FBF7F5"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#C98A8A"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#9AAE8D"></div><span class="swatch__label">tag</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E3C978"></div><span class="swatch__label">tag 2</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#FBF7F5;--c-text:#4A403C;--c-muted:#8C8079;--c-border:#ECE2DD;--c-accent:#C98A8A;--c-btn-bg:#C98A8A;--c-btn-text:#3A2E28;--tag-bg:#9AAE8D;--tag-text:#33402E;--tag2-bg:#E3C978;--tag2-text:#4A3D14;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span><span class="demo-tag demo-tag--alt">3 integrations</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="high-contrast">
+      <div class="specimen__head"><span class="specimen__index">10</span><h3>High-Contrast</h3></div>
+      <p class="specimen__def">Near-black, near-white, and exactly one saturated color — nothing to hide behind.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF;border-color:#0A0A0A;"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#0A0A0A"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E0261C"></div><span class="swatch__label">accent</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#FFFFFF;--c-text:#0A0A0A;--c-muted:#4A4A4A;--c-border:#0A0A0A;--c-border-width:2px;--c-accent:#E0261C;--c-btn-bg:#E0261C;--c-btn-text:#FFFFFF;--tag-bg:#0A0A0A;--tag-text:#FFFFFF;--c-ghost:#0A0A0A;--c-ghost-border:#0A0A0A;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="duotone">
+      <div class="specimen__head"><span class="specimen__index">11</span><h3>Duotone</h3></div>
+      <p class="specimen__def">A single photographic-style two-color wash carried across the whole interface.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#182A4A"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#F4E4DA"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#F0765A"></div><span class="swatch__label">accent</span></div>
+      </div>
+      <div class="demo-stage" style="background:#0F1B30;">
+        <div class="demo-card" style="--c-bg:#182A4A;--c-text:#F4E4DA;--c-muted:#B7C3D9;--c-border:#33507D;--c-accent:#F0765A;--c-btn-bg:#F0765A;--c-btn-text:#182A4A;--tag-bg:#33507D;--tag-text:#F4E4DA;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specimen" id="earth-tone">
+      <div class="specimen__head"><span class="specimen__index">12</span><h3>Earth-Tone</h3></div>
+      <p class="specimen__def">Clay, olive, and sand — a palette borrowed from material rather than pigment theory.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#F6F0E6"></div><span class="swatch__label">bg</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#3A2E22"></div><span class="swatch__label">text</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#A4531F"></div><span class="swatch__label">accent</span></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#6E7B4C"></div><span class="swatch__label">tag</span></div>
+      </div>
+      <div class="demo-stage">
+        <div class="demo-card" style="--c-bg:#F6F0E6;--c-text:#3A2E22;--c-muted:#7C6A55;--c-border:#E6D9C2;--c-accent:#A4531F;--c-btn-bg:#A4531F;--c-btn-text:#FFFFFF;--tag-bg:#6E7B4C;--tag-text:#FFFFFF;">
+          <div class="demo-eyebrow">Automation</div>
+          <h4 class="demo-title">Nightly Sync</h4>
+          <p class="demo-desc">Runs the backup job every night at 2:00 AM and reports failures to the on-call channel.</p>
+          <div class="demo-tags"><span class="demo-tag">Automated</span></div>
+          <div class="demo-actions">
+            <button class="demo-btn">Configure</button>
+            <button class="demo-btn demo-btn--ghost">View logs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    Companion reference for <code>ux-ui-design/color-scheme-patterns.md</code> in the <strong>ai-brain-dump</strong> repo — reasoning, when-to-use notes, and pitfalls for each strategy live there.
+  </footer>
+
+</div>
