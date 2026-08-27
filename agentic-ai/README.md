@@ -7,6 +7,7 @@ Notes on building agents: things that plan, call tools, hold state across steps,
 ## Contents
 
 - [agent-loop.md](agent-loop.md) — the plan/act/observe loop, termination conditions, context growth as the loop's real resource constraint, tool-call design, and common failure modes (thrashing, premature stopping, context poisoning, runaway autonomy).
+- [tool-schema-design.md](tool-schema-design.md) — writing tool schemas the model can call reliably: description as a routing signal, narrowing parameters, one tool/one job, actionable errors, deferred schema loading.
 
 ## Scope
 
