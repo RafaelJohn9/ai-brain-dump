@@ -8,6 +8,7 @@ Structural patterns for organizing a project — how pieces are divided and how 
 
 - [rag-pipeline.md](rag-pipeline.md) — RAG pipeline architecture: offline/online pipeline split, component boundaries, chunking and retrieval tradeoffs, variants, and when not to use it.
 - [service-boundaries.md](service-boundaries.md) — monolith vs. modular monolith vs. microservices: what splitting into services actually costs, where to draw the boundary, and the distributed-monolith anti-pattern.
+- [layering-and-hexagonal.md](layering-and-hexagonal.md) — layering as dependency direction rather than folder names, ports & adapters as the inverted version, what it actually buys (testability, swappable infrastructure), and the ceremony-without-a-second-implementation anti-pattern.
 
 ## Scope
 
